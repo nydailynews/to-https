@@ -17,4 +17,5 @@ find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.co
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/css/foundation.css#/css/foundation.css#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/library/vendor-nav/vendor-include.js#/library/vendor-nav/vendor-include.js#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/includes/ads/ads.js#/includes/ads/ads.js#g' \; -print
+#find . -type d -exec rm -rf {} \;
 ```
