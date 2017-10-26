@@ -17,5 +17,11 @@ find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.co
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/css/foundation.css#/css/foundation.css#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/library/vendor-nav/vendor-include.js#/library/vendor-nav/vendor-include.js#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/includes/ads/ads.js#/includes/ads/ads.js#g' \; -print
+find . -name "index.*" -exec sed -i '{}' -e 's#src="http://interactive.nydailynews.com/#src="/#g' \; -print
+
+# FINALLY
+find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/#https://interactive.nydailynews.com/#g' \; -print
+
+#find . -name "index.*" -exec grep 'href="http://interactive' '{}' \; -print
 #find . -type d -exec rm -rf {} \;
 ```
