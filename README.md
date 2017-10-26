@@ -22,10 +22,15 @@ find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.co
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/includes/ads/ads.js#/includes/ads/ads.js#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#src="http://interactive.nydailynews.com/#src="/#g' \; -print
 
+
 # CSS
 find . -name "index.*" -exec sed -i '{}' -e 's#type="text/css" href="http:#href="https:#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#link href="http:#link href="https:#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#rel="stylesheet" href="http:#rel="stylesheet" href="https:#g' \; -print
+find . -name "*.css" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/#/#g' \; -print
+find . -name "*.css" -exec sed -i '{}' -e 's#http://assets.nydailynews.com/#https://www.nydailynews.com/#g' \; -print
+find . -name "index.*" -exec sed -i '{}' -e 's#url(http://assets.nydailynews.com/#url(https://www.nydailynews.com/#g' \; -print
+
 
 # IMG
 find . -name "index.*" -exec sed -i '{}' -e 's#src="http://poladm.nydailynews.com:8080#src="https://www.nydailynews.com#g' \; -print
@@ -36,5 +41,7 @@ find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.co
 #find . -name "index.*" -exec grep 'href="http://interactive' '{}' \; -print
 find . -name "index.*" -exec grep 'src="http:' '{}' \; -print
 find . -name "index.*" -exec grep 'href="http:' '{}' \; -print
+find . -name "*.css" -exec grep 'http:' '{}' \; -print
+
 #find . -type d -exec rm -rf {} \;
 ```
