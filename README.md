@@ -21,6 +21,12 @@ find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.co
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/includes/ads/ads.js#/includes/ads/ads.js#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#src="http://interactive.nydailynews.com/#src="/#g' \; -print
 
+# CSS
+find . -name "index.*" -exec sed -i '{}' -e 's#type="text/css" href="http:#href="https:#g' \; -print
+find . -name "index.*" -exec sed -i '{}' -e 's#link href="http:#link href="https:#g' \; -print
+find . -name "index.*" -exec sed -i '{}' -e 's#rel="stylesheet" href="http:#rel="stylesheet" href="https:#g' \; -print
+
+
 # FINALLY
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/#https://interactive.nydailynews.com/#g' \; -print
 
