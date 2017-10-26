@@ -11,6 +11,7 @@
 ## bash commands
 ```bash
 #find . -name "index.*" -exec sed -i '{}' -e 's###g' \; -print
+# JS mostly
 find . -name "index.*" -exec sed -i '{}' -e 's#http://assets.nydailynews#//www.nydailynews#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/includes/js/vendor/jquery.js#/js/jquery.min.js#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/js/jquery.min.js#/js/jquery.min.js#g' \; -print
@@ -26,6 +27,8 @@ find . -name "index.*" -exec sed -i '{}' -e 's#type="text/css" href="http:#href=
 find . -name "index.*" -exec sed -i '{}' -e 's#link href="http:#link href="https:#g' \; -print
 find . -name "index.*" -exec sed -i '{}' -e 's#rel="stylesheet" href="http:#rel="stylesheet" href="https:#g' \; -print
 
+# IMG
+find . -name "index.*" -exec sed -i '{}' -e 's#src="http://poladm.nydailynews.com:8080#src="https://www.nydailynews.com#g' \; -print
 
 # FINALLY
 find . -name "index.*" -exec sed -i '{}' -e 's#http://interactive.nydailynews.com/#https://interactive.nydailynews.com/#g' \; -print
