@@ -8,6 +8,8 @@
 * https://devinteractive.nydailynews.com/project/
 * https://devinteractive.nydailynews.com/project/archive/amazing-history-nyc/
 
+find . -name "index.*" -exec sed -i '{}' -e 's#assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-774d60efeb80c8b9f62cea9078508154c4f534ff.js#assets.adobedtm.com/4fc527d6fda921c80e462d11a29deae2e4cf7514/satelliteLib-c91fdc6ac624c6cbcd50250f79786de339793801.js#g' \; -print
+
 ## bash commands
 ```bash
 #find . -name "index.*" -exec sed -i '{}' -e 's###g' \; -print
