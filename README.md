@@ -48,5 +48,6 @@ find . -name "*.css" -exec grep 'http:' '{}' \; -print
 #find . -type d -exec rm -rf {} \;
 
 find . -name "index.*" -exec sed -i '{}' -e 's#includes/ads/ads.js#includes/template/template.js#g' \; -print
-
+find . -name "index.*" -exec sed -i '{}' -e 's#rh.css"#rh.css?r=2018"#g' \; -print
+find . -name "index.*" -exec sed -i '{}' -e "s#rh.css'#rh.css?r=2018'#g" \; -print
 ```
